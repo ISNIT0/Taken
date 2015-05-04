@@ -15,7 +15,7 @@ Include the script:
 npm install taken
 ```
 ```javascript
-var T = require('taken')
+var T = require('taken');
 ```
 
 ## Usage
