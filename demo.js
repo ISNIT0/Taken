@@ -13,12 +13,25 @@ var Test = T().map(function(val){console.log(val)});
 Test('hi');
 
 
-T('xyz zyx').combine(function(xyz, zyx){
+T('xyz zyx').historic(function(xyz, zyx){
   console.log(xyz, zyx)
 });
 T('xyz')('Hi');
 T('zyx')('Joe');
 
+
+T('merged').map(function(value){
+  console.log(value);
+});
+T('xyz').map(T('merged'));
+T('zyx').map(T('merged'));
+
+
+
+/*
+T('intervals').map(console.log);
+T('intervals').intervals(300);
+*/
 
 /*
   $('.myButton').click(Test);

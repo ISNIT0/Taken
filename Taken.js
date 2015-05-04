@@ -22,17 +22,17 @@ var T = function(ids, fn, helpers, handlers) {
       handlers.push(handler);
       return fn;
     },
-    combine: function(callback) {
-      var tmp = function(value, index) {
-        this.array = this.array||[];
-        this.array[index] = value;
-        callback.apply({}, this.array);
-      };
+    historic: function(callback) {
       ids.forEach(function(id, index) {
         (T.channels[id] = T.channels[id] || []).push([function(value) {
-          tmp(value, index);
+          this.array = this.array||[];
+          this.array[index] = value;
+          callback.apply({}, this.array);
         }]);
       });
+    },
+    intervals: function(ms){
+      setInterval(function(){fn({});}, ms);
     }
   }).map(function(key) {
     fn[key] = helpers[key];
