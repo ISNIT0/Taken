@@ -1,4 +1,4 @@
-var T = function(ids, fn) {
+var T = function(id, fn) {
   return fn = {
     handlerSet: (T.channels[id] = (T.channels[id] || []).concat([[]])).slice(-1)[0],
     genHandler: function(allHandlers){
