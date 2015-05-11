@@ -143,6 +143,12 @@ T('xyz').map(function(){ //Every 300 miliseconds
 });
 ```
 
+
+##To Add
+Intervals function should send index param.
+Add infinite function where next calls the next iteration.
+
+
 ## Authors
 
 [Joe Reeve](https://github.com/isnit0)
