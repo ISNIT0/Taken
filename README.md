@@ -22,11 +22,11 @@ var T = require('taken');
 
 Channels can be saved globally with 
 ```javascript
-T( *ChannelName* ).map
+T( *ChannelName* )
 ```
 or as a variable with 
 ```javascript
-var ChannelName = T().map
+var ChannelName = T()
 ```
 
 
@@ -145,8 +145,8 @@ T('xyz').map(function(){ //Every 300 miliseconds
 
 
 ##To Add
-Intervals function should send index param.
-Add infinite function where next calls the next iteration.
+Take
+Prev Values
 Pass any sent parameters (not just one)
 
 ## Authors
